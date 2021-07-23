@@ -48,6 +48,8 @@
 							<input type="text" id="Laundry" /><br>
 							<label for="Computer">Number of hours that the computer is used per day:</label><br>
 							<input type="text" id="Computer" /><br>
+							<label for="Lights">Number of hours that the lights are on per day:</label><br>
+							<input type="text" id="Lights" /><br>
 							<button onclick="calc()">Calculate!</button>
 							</form>
 							
@@ -72,9 +74,13 @@
     				var a = document.getElementById('TVon').value;
     				var b = document.getElementById('ACon').value;
 				var c = document.getElementById('Dishwasher').value;
-				
+				var d = document.getElementById('Oven').value;
+				var e = document.getElementById('Refrigerator').value;
+				var f = document.getElementById('Laundry').value;
+				var g = document.getElementById('Computer').value;
+				var h = document.getElementById('Lights').value;
 
-   			 	var sum = parseInt(a) + parseInt(b) + parseInt(c);
+   			 	var sum = parseInt(a) + parseInt(b) + parseInt(c)+ parseInt(d) + parseInt(e) + parseInt(f) + parseInt(g) + parseInt(h);
     				alert(sum);
   				}
 			</script>
