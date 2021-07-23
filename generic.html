@@ -34,12 +34,20 @@
 						<div class="inner">
 							<h1 class="major">A Generico Page</h1>
 							<form>
-							<label for="TVon">Number of hours that TV is on per day:</label><br>
+							<label for="TVon">Number of hours that the TV is on per day:</label><br>
 							<input type="text" id="TVon" /><br>
-							<label for="ACon">Number of hours that AC is on per day:</label><br>
+							<label for="ACon">Number of hours that the AC is on per day:</label><br>
 							<input type="text" id="ACon" /><br>
-							<label for="Dishwasher">Number of hours that Dishwasher is on per day:</label><br>
+							<label for="Dishwasher">Number of hours that the dishwasher is on per day:</label><br>
 							<input type="text" id="Dishwasher" /><br>
+							<label for="Oven">Number of hours that the oven is on per day:</label><br>
+							<input type="text" id="Oven" /><br>
+							<label for="Refrigerator">Number of hours that the refrigerator is on per day:</label><br>
+							<input type="text" id="Refrigerator" /><br>
+							<label for="Laundry">Number of cycles of laundry per day:</label><br>
+							<input type="text" id="Laundry" /><br>
+							<label for="Computer">Number of hours that the computer is used per day:</label><br>
+							<input type="text" id="Computer" /><br>
 							<button onclick="calc()">Calculate!</button>
 							</form>
 							
@@ -64,6 +72,7 @@
     				var a = document.getElementById('TVon').value;
     				var b = document.getElementById('ACon').value;
 				var c = document.getElementById('Dishwasher').value;
+				
 
    			 	var sum = parseInt(a) + parseInt(b) + parseInt(c);
     				alert(sum);
