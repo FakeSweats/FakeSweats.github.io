@@ -87,7 +87,7 @@
 				var kwr=document.getElementById('KWR').value;
 
    			 	var sum = parseInt((parseInt(TV)*0.15 + parseInt(AC)*3 + parseInt(dish)*1.8+ parseInt(oven)*2.3 + parseInt(fridge)*0.4 + parseInt(laundry)*0.5 + parseInt(comp)*0.15 + parseInt(lit)*0.06*parseInt(litnum))*parseFloat(kwr)*30);
-    				alert("You will pay "+sum+" dollars per month.");
+    				document.getElementById("sum").innerHTML = ("You will pay "+sum+" dollars per month.");
   				}
 			</script>
 			<script src="assets/js/jquery.min.js"></script>
