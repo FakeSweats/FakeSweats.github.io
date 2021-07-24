@@ -51,10 +51,12 @@
 							<input type="text" id="Computer" /><br>
 							<label for="Lights">Number of hours that the lights are on per day:</label><br>
 							<input type="text" id="Lights" /><br>
-              <label for="litnum">How many lights you have:</label><br>
+              						<label for="litnum">How many lights you have:</label><br>
 							<input type="text" id="litnum" /><br>
 							<label for="KWR">What is your kilowatt rate(in dollars)?</label><br>
 							<input type="text" id="KWR" /><br>
+							<label for="sqft">How many square feet is your house?</label><br>
+							<input type="text" id="sqft" /><br>	
 							<button onclick="calc()">Calculate!</button>
 							</form>
 							
@@ -86,9 +88,24 @@
 				var lit = document.getElementById('Lights').value;
         			var litnum=document.getElementById('litnum').value;
 				var kwr=document.getElementById('KWR').value;
+				var sqft=document.getElementById('sqft').value;
 
-   			 	var sum = parseInt((parseInt(TV)*0.15 + parseInt(AC)*3 + parseInt(dish)*1.8+ parseInt(oven)*2.3 + parseInt(fridge)*0.4 + parseInt(laundry)*0.5 + parseInt(comp)*0.15 + parseInt(lit)*0.06*parseInt(litnum))*parseFloat(kwr)*30);
-    				alert("You will pay "+sum+" dollars per month.");
+   			 	var totalenergy=parseInt(TV)*0.15+parseInt(AC)*3+parseInt(dish)*1.8+parseInt(oven)*2.3+parseInt(fridge)*0.4+parseInt(laundry)*0.5+parseInt(comp)*0.15+parseInt(lit)*parseInt(litnum)*0.06;
+				var sum = parseInt((parseInt(TV)*0.15 + parseInt(AC)*3 + parseInt(dish)*1.8+ parseInt(oven)*2.3 + parseInt(fridge)*0.4 + parseInt(laundry)*0.5 + parseInt(comp)*0.15 + parseInt(lit)*0.06*parseInt(litnum))*parseFloat(kwr)*30);
+    				var diff =sqft*0.06
+				
+				if(sqft*0.06>sum){
+					let sqft="Congratulations, you use less energy than a household of your size, which would use"+(diff-totalenergy)+" more Kilowatts per month";
+				}
+				else{
+					let sqft="You need to turn down your energy use! You use "+(totalenergy-diff)+" Kilowatts more energy per month than an average household."	
+				}
+				
+				
+				alert(sqft+"You will pay "+sum+" dollars per month.");
+				
+				
+				
   				}
 			</script>
 			<script src="assets/js/jquery.min.js"></script>
