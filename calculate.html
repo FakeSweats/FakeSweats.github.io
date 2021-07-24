@@ -95,14 +95,14 @@
     				var diff =sqft*0.06
 				
 				if(sqft*0.06>sum){
-					let sqft="Congratulations, you use less energy than a household of your size, which would use"+(diff-totalenergy)+" more Kilowatts per month";
+					let potat="Congratulations, you use less energy than a household of your size, which would use"+(diff-totalenergy)+" more Kilowatts per month";
 				}
 				else{
-					let sqft="You need to turn down your energy use! You use "+(totalenergy-diff)+" Kilowatts more energy per month than an average household."	
+					let potat="You need to turn down your energy use! You use "+(totalenergy-diff)+" Kilowatts more energy per month than an average household."	
 				}
 				
 				
-				alert(sqft+"You will pay "+sum+" dollars per month.");
+				alert("You will pay "+sum+" dollars per month." + potat);
 				
 				
 				
